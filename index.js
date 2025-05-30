@@ -1,3 +1,5 @@
+import { Chart } from './Chart.js';
+
 const slides = [
     {
         id:'slide-1',
@@ -126,29 +128,23 @@ const slides = [
         title: '사이버 전쟁의 추후 데이터',
         content: `
             <div class="slide-content">
-                <h1 class="slide-title">다섯 번째 주제</h1>
-                <h2 class="slide-subtitle">부제목</h2>
-                <p class="slide-text">이곳에 다섯 번째 주제에 대한 내용을 작성하세요.</p>
-                <div style="margin: 20px 0; border: 1px solid #ddd; border-radius: 8px; padding: 15px; background-color: #f9f9f9;">
-                    <p style="font-style: italic;">"여기에 중요한 인용구나 강조하고 싶은 내용을 작성할 수 있습니다. 이 부분은 시각적으로 구분되어 주목을 끌게 됩니다."</p>
+                <h1 class="slide-title">국가별 하이브리드 전쟁 우세 예측 그래프</h1>
+                <div>
+                    <canvas id="hybridWarChart" width:"600" height="400"></canvas>
                 </div>
-                <p class="slide-text">추가 설명이나 마무리 문장을 작성하세요.</p>
+                <p class="slide-text">2050년 주요국 하이브리드 전쟁 역량 비교</p>
             </div>
         `
     },
     {
         id: 'slide-8',
-        title: '결론',
+        title: '마무리',
         content: `
             <div class="slide-content">
-                <h1 class="slide-title">결론</h1>
-                <p class="slide-text">프레젠테이션의 주요 내용을 요약합니다.</p>
+                <h1 class="slide-title">마무리 및 소감</h1>
+                <p class="slide-text">군사학과 관련한 조사를 마무리하며</p>
                 <ul class="slide-list">
                     <li>첫 번째 주제 요약</li>
-                    <li>두 번째 주제 요약</li>
-                    <li>세 번째 주제 요약</li>
-                    <li>네 번째 주제 요약</li>
-                    <li>다섯 번째 주제 요약</li>
                 </ul>
                 <p class="slide-text" style="margin-top: 30px;">감사합니다!</p>
                 <p class="slide-text">질문이나 의견이 있으시면 말씀해 주세요.</p>
