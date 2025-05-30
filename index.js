@@ -160,7 +160,7 @@ const slideCounter = document.getElementById('slide-counter');
 
 // 슬라이드 렌더링 함수
 function renderSlides() {
-    slideContainer.innerHTML = '';
+    slideContainer.innerHTML = './miffy.html';
     
     slides.forEach((slide, index) => {
         const slideElement = document.createElement('div');
