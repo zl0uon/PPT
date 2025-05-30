@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>사이버전 승률 비교</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    canvas {
+      max-width: 600px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body> 
+
+  <h2>국가별 사이버전 가상 승률 비교</h2>
+  <canvas id="cyberChart"></canvas>
+
+  <script>
+    const ctx = document.getElementById('cyberChart').getContext('2d');
+
+    const data = {
+      labels: ['미국', '중국', '러시아', '한국', '일본'],
+      datasets: [{
+        label: '사이버전 승률',
+        data: [35, 25, 20, 12, 8],  // 가상 수치 (%)
+        backgroundColor: [
+          '#1f77b4', // 미국
+          '#ff7f0e', // 중국
+          '#2ca02c', // 러시아
+          '#d62728', // 한국
+          '#9467bd'  // 일본
+        ],
+        borderWidth: 1
+      }]
+    };
+
+    const config = {
+      type: 'pie',
+      data: data,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'right'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.label}: ${context.parsed}%`;
+              }
+            }
+          },
+          title: {
+            display: true,
+            text: '사이버전 국가별 가상 승률 (기술력 및 공격력 기반)'
+          }
+        }
+      }
+    };
+
+    new Chart(ctx, config);
+  </script>
+
+</body>
+</html>

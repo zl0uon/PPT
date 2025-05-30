@@ -1,0 +1,297 @@
+const slides = [
+    {
+        id:'slide-1',
+        title: '조선시대 사람들은 어떻게 살았을까2를 읽고',
+        content: 
+        <div class="slide-content">
+            <h1 class="slide-title">조선에서의 군사학</h1>
+            <h2 class="slide-subtitle">조선시대 사람들은 어떻게 살았을까2</h2>
+            <h3 class="slide-text">2516 유지영</h3>
+        </div>
+    },
+
+      {
+        id: 'slide-2',
+        title: '목차',
+        content: `
+            <div class="slide-content">
+                <h1 class="slide-title">목차</h1>
+                <ul class="slide-list">
+                    <li>조선시대 사람들은 어떻게 살았을까2를 읽고</li>
+                    <li>오늘의 군사학 특징</li>
+                    <li>조선시대와 오늘날을 비교</li>
+                    <li>미래의 군사학은?</li>
+                    <li>사이버 전쟁의 추후 데이터</li>
+                    <li>마무리</li>
+                </ul>
+            </div>
+        `
+    },
+    {
+        id: 'slide-3',
+        title: '조선시대 사람들은 어떻게 살았을까2를 읽고',
+        content: `
+            <div class="slide-content">
+                <h1 class="slide-title">조선시대 사람들은 어떻게 살았을까2를 읽고</h1>
+                <h2 class="slide-subtitle">내용 정리</h2>
+                <p class="slide-text">초반: 각자가 무기 없이 칼을 든 왜놈과 전쟁을 하였다 -> 결과 참패
+                                      중반: 무기와 군사 체계를 정비함 -> 총 제작 및 포수, 사수, 살수라는 3수병으로 편제
+                                      후반: 여진족과의 싸움에서 적의 세력이 커지면 정벌을 통해 압도하는 방식을 택함   </p>
+                <p class="slide-text">추가 설명이나 예시를 포함할 수 있습니다.</p>
+                <ul class="slide-list">
+                    <li>키워드 1: 훈련도감 (임진왜란을 극복하며 만들어진 새로운 중앙 군영) </li>
+                    <li>키워드 2: 3수병 (포수, 사수, 살수)</li>
+                    <li>키워드 3: 초기 조선군은 고려군의 체계를 그대로 계승</li>
+                </ul>
+            </div>
+        `
+    },
+    {
+        id: 'slide-4',
+        title: '오늘날의 군사학 특징',
+        content: `
+            <div class="slide-content">
+                <h1 class="slide-title">오늘날의 군사학 특징</h1>
+                <h2 class="slide-subtitle">한국의 군사 체제</h2>
+                <p class="slide-text">오늘날의 군사학에서는 각종 무기들이 개발되고 있다. 예를 들어 첨단 무기, 미사일 방어, 무인 전력 무기, 사이버 공격전, 해양/우주 관련 무기 등이 개발되고 있다. 이 중 우리가 주목해야할 점은 사이버전이다. 현대 기술이 발달함에 따라 사이버 전쟁이 많이 발생하고 있는데 우리는 이 부분을 주의깊게 보아야한다.</p>
+                <ul class="slide-list">
+                    <li>사이버 사령부 운용</li>
+                    <li>AI 기반 사이버 방어 시스템 구축</li>
+                    <li>전파 방해, 통신 교란 기술 발전</li>
+                </ul>
+            </div>
+        `
+    },
+    {
+        id: 'slide-5',
+        title: '조선시대와 오늘날 무기를 비교',
+        content: `
+            <div class="slide-content">
+                <h1 class="slide-title">조선시대와 오늘날 무기를 비교</h1>
+                <div style="display: flex; justify-content: space-between;">
+                    <div style="width: 48%;">
+                        <h2 class="slide-subtitle">조선시대 무기</h2>
+                        <p class="slide-text">조선시대는 인력 중심 + 화약의 기초적 활용 및 성곽 방어와 제한된 해상 전투에만 의존하였다.</p>
+                        <ul class="slide-list">
+                            <li>주력 무기: 활,창,화살,검,활강총,화차</li>
+                            <li>화포 무기: 총통, 화차</li>
+                            <li>정보 통신 수단: 봉수제, 파발제</li>
+                        </ul>
+                    </div>
+                    <div style="width: 48%;">
+                        <h2 class="slide-subtitle">오늘날 무기</h2>
+                        <p class="slide-text">오늘날은 기술 중심 + 정밀 무기체계를 지니고 있으며 미사일, 전자전, 사이버 AI에 기반한 첨단 복합 전력구조를 갖추고 있다.</p>
+                        <div class="slide-image-placeholder" style="height: 150px; background-color: #eee; display: flex; justify-content: center; align-items: center;">
+                        <ul class="slide-list">
+                            <li>주력 무기: 전차, 자주포, 미사일, 전투기</li>
+                            <li>화포 무기: 자주포, 천무, 패트리어트 미사일</li>
+                            <li>정보 통신 수단: 위성 정찰, 무인기, 사이버전, AI 작전 통제</li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `
+    },
+    {
+        id: 'slide-6',
+        title: '미래의 군사학은?',
+        content: `
+            <div class="slide-content">
+                <h1 class="slide-title">미래의 군사학은?</h1>
+                <h2 class="slide-subtitle">사이버전 관점의 미래 군사학 변화 양상</h2>
+                <p class="slide-text">물리적 전투에서 정보전 중심으로 전환</p>
+                        <ul class="slide-list">
+                            <li>과거: 병력과 무기 수가 전쟁의 승패를 좌우한다.</li>
+                            <li>미래 핵심: 정보 탈취, 시스템 마비, 데이터 조작</li>
+                            <li>미래: 적의 지휘 체계를 무력화하고 민간 사회 기반시설을 마비시켜 전쟁 능력을 상실시킨다.</li>
+                        </ul>
+                <p class="slide-text">사이버 무기의 발달</p>
+                        <ul class="slide-list">
+                            <li>사이버 무기 특징 1: 사이버 무기는 흔적이 거의 없고 발사국 추적이 어렵다.</li>
+                            <li>사이버 무기 특징 2: 실시간 대응이 어려우며, 민간 피해가 크다</li>
+                            <li>공격 방식 예: APT 공격, 랜섬웨어, 디도스</li>
+                        </ul>
+                <p class="slide-text">군사 작전 개념의 변화</p>
+                        <ul class="slide-list">
+                            <li>개념 1: 사이버 우세권 확보가 전투 승리의 조건이다</li>
+                            <li>개념 2: AI가 사이버 공격/방어를 자동화하여 기술이 발달된다.</li>
+                            <li>개념 3: 디지털 전장을 지휘하는 지휘관의 역할이 필요해진다.</li>
+                        </ul>
+            </div>
+        `
+    },
+    {
+        id: 'slide-7',
+        title: '사이버 전쟁의 추후 데이터',
+        content: `
+            <div class="slide-content">
+                <h1 class="slide-title">다섯 번째 주제</h1>
+                <h2 class="slide-subtitle">부제목</h2>
+                <p class="slide-text">이곳에 다섯 번째 주제에 대한 내용을 작성하세요.</p>
+                <div style="margin: 20px 0; border: 1px solid #ddd; border-radius: 8px; padding: 15px; background-color: #f9f9f9;">
+                    <p style="font-style: italic;">"여기에 중요한 인용구나 강조하고 싶은 내용을 작성할 수 있습니다. 이 부분은 시각적으로 구분되어 주목을 끌게 됩니다."</p>
+                </div>
+                <p class="slide-text">추가 설명이나 마무리 문장을 작성하세요.</p>
+            </div>
+        `
+    },
+    {
+        id: 'slide-8',
+        title: '결론',
+        content: `
+            <div class="slide-content">
+                <h1 class="slide-title">결론</h1>
+                <p class="slide-text">프레젠테이션의 주요 내용을 요약합니다.</p>
+                <ul class="slide-list">
+                    <li>첫 번째 주제 요약</li>
+                    <li>두 번째 주제 요약</li>
+                    <li>세 번째 주제 요약</li>
+                    <li>네 번째 주제 요약</li>
+                    <li>다섯 번째 주제 요약</li>
+                </ul>
+                <p class="slide-text" style="margin-top: 30px;">감사합니다!</p>
+                <p class="slide-text">질문이나 의견이 있으시면 말씀해 주세요.</p>
+            </div>
+        `
+    }
+];
+
+// 전역 변수
+let currentSlideIndex = 0;
+const slideContainer = document.getElementById('slide-container');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+const slideCounter = document.getElementById('slide-counter');
+
+// 슬라이드 렌더링 함수
+function renderSlides() {
+    slideContainer.innerHTML = '';
+    
+    slides.forEach((slide, index) => {
+        const slideElement = document.createElement('div');
+        slideElement.className = `slide ${index === currentSlideIndex ? 'active' : ''}`;
+        slideElement.id = slide.id;
+        slideElement.innerHTML = slide.content;
+        slideContainer.appendChild(slideElement);
+    });
+    
+    updateSlideCounter();
+}
+
+// 슬라이드 카운터 업데이트
+function updateSlideCounter() {
+    slideCounter.textContent = `${currentSlideIndex + 1} / ${slides.length}`;
+}
+
+// 이전 슬라이드로 이동
+function goToPrevSlide() {
+    if (currentSlideIndex > 0) {
+        currentSlideIndex--;
+        updateActiveSlide();
+    }
+}
+
+// 다음 슬라이드로 이동
+function goToNextSlide() {
+    if (currentSlideIndex < slides.length - 1) {
+        currentSlideIndex++;
+        updateActiveSlide();
+    }
+}
+
+// 활성 슬라이드 업데이트
+function updateActiveSlide() {
+    const allSlides = document.querySelectorAll('.slide');
+    allSlides.forEach((slide, index) => {
+        if (index === currentSlideIndex) {
+            slide.classList.add('active');
+        } else {
+            slide.classList.remove('active');
+        }
+    });
+    
+    updateSlideCounter();
+}
+
+// 키보드 이벤트 처리
+function handleKeyboardNavigation(event) {
+    if (event.key === 'ArrowLeft') {
+        goToPrevSlide();
+    } else if (event.key === 'ArrowRight') {
+        goToNextSlide();
+    }
+}
+
+// 이벤트 리스너 등록
+function setupEventListeners() {
+    prevBtn.addEventListener('click', goToPrevSlide);
+    nextBtn.addEventListener('click', goToNextSlide);
+    document.addEventListener('keydown', handleKeyboardNavigation);
+    
+    // 터치 이벤트 지원 (모바일 대응)
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    slideContainer.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    slideContainer.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+    
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        if (touchEndX < touchStartX - swipeThreshold) {
+            // 왼쪽으로 스와이프 (다음 슬라이드)
+            goToNextSlide();
+        } else if (touchEndX > touchStartX + swipeThreshold) {
+            // 오른쪽으로 스와이프 (이전 슬라이드)
+            goToPrevSlide();
+        }
+    }
+}
+
+// 초기화 함수
+function init() {
+    renderSlides();
+    setupEventListeners();
+}
+
+// 페이지 로드 시 초기화
+document.addEventListener('DOMContentLoaded', init);
+
+// 슬라이드 직접 이동 함수 (외부에서 호출 가능)
+function goToSlide(index) {
+    if (index >= 0 && index < slides.length) {
+        currentSlideIndex = index;
+        updateActiveSlide();
+    }
+}
+
+// 슬라이드 콘텐츠 동적 업데이트 함수 (외부에서 호출 가능)
+function updateSlideContent(index, newContent) {
+    if (index >= 0 && index < slides.length) {
+        slides[index].content = newContent;
+        renderSlides();
+    }
+}
+
+// 슬라이드 추가 함수 (외부에서 호출 가능)
+function addSlide(slideData) {
+    slides.push(slideData);
+    renderSlides();
+}
+
+// 슬라이드 제거 함수 (외부에서 호출 가능)
+function removeSlide(index) {
+    if (index >= 0 && index < slides.length) {
+        slides.splice(index, 1);
+        if (currentSlideIndex >= slides.length) {
+            currentSlideIndex = slides.length - 1;
+        }
+        renderSlides();
+    }
+}
