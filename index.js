@@ -1,5 +1,3 @@
-
-
 const slides = [
     {
         id:'slide-1',
