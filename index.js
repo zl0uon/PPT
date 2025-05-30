@@ -1,4 +1,4 @@
-import { Chart } from './Chart.js';
+
 
 const slides = [
     {
