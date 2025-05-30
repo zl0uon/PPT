@@ -2,12 +2,13 @@ const slides = [
     {
         id:'slide-1',
         title: '조선시대 사람들은 어떻게 살았을까2를 읽고',
-        content: 
+        content: `
         <div class="slide-content">
             <h1 class="slide-title">조선에서의 군사학</h1>
             <h2 class="slide-subtitle">조선시대 사람들은 어떻게 살았을까2</h2>
             <h3 class="slide-text">2516 유지영</h3>
         </div>
+        `
     },
 
       {
@@ -127,8 +128,8 @@ const slides = [
         content: `
             <div class="slide-content">
                 <h1 class="slide-title">국가별 하이브리드 전쟁 우세 예측 그래프</h1>
-                <div>
-                    <canvas id="hybridWarChart" width:"600" height="400"></canvas>
+                <div style="height: 400px; margin: 20px 0;">
+                    <canvas id="hybridWarChart" width="600" height="400"></canvas>
                 </div>
                 <p class="slide-text">2050년 주요국 하이브리드 전쟁 역량 비교</p>
             </div>
@@ -160,7 +161,8 @@ const slideCounter = document.getElementById('slide-counter');
 
 // 슬라이드 렌더링 함수
 function renderSlides() {
-    slideContainer.innerHTML = './miffy.html';
+    // 이 부분을 수정: 기존 내용을 초기화
+    slideContainer.innerHTML = '';
     
     slides.forEach((slide, index) => {
         const slideElement = document.createElement('div');
@@ -200,6 +202,10 @@ function updateActiveSlide() {
     allSlides.forEach((slide, index) => {
         if (index === currentSlideIndex) {
             slide.classList.add('active');
+            // 차트 슬라이드로 이동했을 때 차트 초기화
+            if (index === 6) {
+                setTimeout(initializeChart, 100); // 슬라이드 전환 후 약간의 지연을 두고 차트 초기화
+            }
         } else {
             slide.classList.remove('active');
         }
@@ -248,10 +254,89 @@ function setupEventListeners() {
     }
 }
 
+// 차트 초기화 함수
+function initializeChart() {
+    const chartCanvas = document.getElementById('hybridWarChart');
+    if (!chartCanvas) return;
+    
+    // 이미 차트가 있으면 파괴
+    if (window.hybridWarChartInstance) {
+        window.hybridWarChartInstance.destroy();
+    }
+    
+    // 차트 데이터
+    const data = {
+        labels: ['전통적 군사력', '첨단 군사 기술', '사이버전 역량', '우주 영역 군사력', '정보전/심리전', '경제적 회복력', '동맹 관계', '사회적 회복력'],
+        datasets: [
+            {
+                label: '미국',
+                data: [9.0, 9.5, 8.5, 9.5, 8.0, 8.0, 8.5, 7.5],
+                borderColor: 'rgba(0, 123, 255, 1)',
+                backgroundColor: 'rgba(0, 123, 255, 0.1)',
+                fill: true
+            },
+            {
+                label: '중국',
+                data: [8.5, 9.0, 9.0, 8.5, 8.5, 9.0, 7.0, 7.0],
+                borderColor: 'rgba(255, 153, 0, 1)',
+                backgroundColor: 'rgba(255, 153, 0, 0.1)',
+                fill: true
+            },
+            {
+                label: '러시아',
+                data: [8.0, 7.5, 9.0, 7.5, 9.0, 6.0, 6.5, 6.0],
+                borderColor: 'rgba(40, 167, 69, 1)',
+                backgroundColor: 'rgba(40, 167, 69, 0.1)',
+                fill: true
+            },
+            {
+                label: '인도',
+                data: [7.5, 7.0, 7.5, 7.0, 7.0, 8.0, 7.5, 8.0],
+                borderColor: 'rgba(220, 53, 69, 1)',
+                backgroundColor: 'rgba(220, 53, 69, 0.1)',
+                fill: true
+            }
+        ]
+    };
+    
+    // 차트 옵션
+    const options = {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            r: {
+                min: 0,
+                max: 10,
+                ticks: {
+                    stepSize: 2
+                }
+            }
+        },
+        plugins: {
+            title: {
+                display: true,
+                text: '2050년 하이브리드 전쟁 국가별 우세 영역'
+            }
+        }
+    };
+    
+    // 레이더 차트 생성
+    window.hybridWarChartInstance = new Chart(chartCanvas, {
+        type: 'radar',
+        data: data,
+        options: options
+    });
+}
+
 // 초기화 함수
 function init() {
     renderSlides();
     setupEventListeners();
+    
+    // 현재 슬라이드가 차트 슬라이드일 때만 차트 초기화
+    if (currentSlideIndex === 6) { // 7번 슬라이드의 인덱스는 6
+        setTimeout(initializeChart, 100);
+    }
 }
 
 // 페이지 로드 시 초기화
